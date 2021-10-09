@@ -1,14 +1,19 @@
 <form>
-    <app-label-icon-text-field 
-    id="bill-amount-field" 
-    name="bill" 
-    label="Bill"></app-label-icon-text-field>
-    <app-tip-radio-button *ngFor="let tipPercent of [5, 10, 15, 25, 50]"
-    id="tip-percents" 
-    label={{tipPercent}} 
-    name="tip-option"></app-tip-radio-button>
-    <app-label-icon-text-field 
-    id="number-of-people-field" 
-    name="number-of-people" 
-    label="Number of People"></app-label-icon-text-field>
+	<app-text-input-with-label-and-icon
+		name="bill-amount"
+		labelText="Bill"
+	></app-text-input-with-label-and-icon>
+	<div class="tip-selection">
+		<app-input-with-label
+			*ngFor="let tipPercent of [5, 10, 15, 25, 50]"
+			type="radio"
+			labelText="{{ tipPercent + '%' }}"
+			name="tip-option"
+		></app-input-with-label>
+		<input class="custom-tip" type="text" placeholder="Custom" />
+	</div>
+	<app-text-input-with-label-and-icon
+		name="number-of-people"
+		labelText="Number of People"
+	></app-text-input-with-label-and-icon>
 </form>
