@@ -1,10 +1,15 @@
 @mixin curved-container($height, $width, $padding: 0 0, $border: 0, $color) {
-    height: $height;
-    width: $width;
-    min-height: 200px;
-    min-width: 200px;
-    padding: $padding;
-    border-radius: 16px;
-    border: $border;
-    background-color: $color;
+	height: $height;
+	width: $width;
+	min-height: 200px;
+	min-width: 200px;
+	padding: $padding;
+	border-radius: 16px;
+	border: $border;
+	background-color: $color;
+}
+@mixin button($padding: 5px 5px, $background-color, $border-radius: 0px) {
+	padding: $padding;
+	background-color: $background-color;
+    border-radius: $border-radius;
 }
