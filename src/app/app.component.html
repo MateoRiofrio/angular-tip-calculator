@@ -1,5 +1,6 @@
-<div class="calculator-container row">
+<div class="calculator-container">
 	<form>
+        <!-- Input column with bill amount, tip selection, and number of people -->
 		<div class="column">
 			<app-text-input-with-label-and-icon
 				name="bill-amount"
@@ -19,7 +20,17 @@
 				labelText="Number of People"
 			></app-text-input-with-label-and-icon>
 		</div>
-
-		<div class="results-container column"></div>
+        <!-- Results column with tip amount, total amount, and sumbit/reset button -->
+		<div class="results-container column">
+            <div class="row">
+                <p>Tip Amount <span class="big-result-text">$0.00</span><br><span>/ person</span></p>
+            </div>
+            <div class="row">
+                <p>Total <span class="big-result-text">$0.00</span><br><span>/ person</span></p>
+            </div>
+            <div class="row">
+                <input class="submit-button" type="submit" value="Calculate">
+            </div>
+        </div>
 	</form>
 </div>
