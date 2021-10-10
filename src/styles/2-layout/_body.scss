@@ -43,6 +43,15 @@ body {
 
 	}
 }
+.submit-button {
+    @include button($padding: 10px, $background-color: $primary, $border-radius: 5px);
+    font-weight: $large-weight;
+    font-size: $small-font-size;
+    color: $very-dark-cyan;
+    width:100%;
+    border: none;
+    
+}
 @media screen and (max-width: 1100px) {
 	.column {
 		width: 100%;
