@@ -1,0 +1,8 @@
+@mixin curved-container($height, $width, $padding: 0 0, $border: 0, $color) {
+    height: $height;
+    width: $width;
+    padding: $padding;
+    border-radius: 16px;
+    border: $border;
+    background-color: $color;
+}

@@ -1,19 +1,24 @@
-<form>
-	<app-text-input-with-label-and-icon
-		name="bill-amount"
-		labelText="Bill"
-	></app-text-input-with-label-and-icon>
-	<div class="tip-selection">
-		<app-input-with-label
-			*ngFor="let tipPercent of [5, 10, 15, 25, 50]"
-			type="radio"
-			labelText="{{ tipPercent + '%' }}"
-			name="tip-option"
-		></app-input-with-label>
-		<input class="custom-tip" type="text" placeholder="Custom" />
-	</div>
-	<app-text-input-with-label-and-icon
-		name="number-of-people"
-		labelText="Number of People"
-	></app-text-input-with-label-and-icon>
-</form>
+<div class="body-container">
+    <form>
+        <app-text-input-with-label-and-icon
+            name="bill-amount"
+            labelText="Bill"
+        ></app-text-input-with-label-and-icon>
+        <div class="tip-selection">
+            <app-input-with-label
+                *ngFor="let tipPercent of [5, 10, 15, 25, 50]"
+                type="radio"
+                labelText="{{ tipPercent + '%' }}"
+                name="tip-option"
+            ></app-input-with-label>
+            <input class="custom-tip" type="text" placeholder="Custom" />
+        </div>
+        <app-text-input-with-label-and-icon
+            name="number-of-people"
+            labelText="Number of People"
+        ></app-text-input-with-label-and-icon>
+    </form>
+    <div class="results-container">
+
+    </div>
+</div>

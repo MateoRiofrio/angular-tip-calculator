@@ -1,9 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import './0-base/base-dir';
-@import './1-modules/module-dir';
+@import './0-base/__base-dir';
+@import './1-modules/__module-dir';
+@import './2-layout/__layout-dir';
 @import url(https://fonts.google.com/specimen/Space+Mono);
-
-body {
-    font-family: monospace;
-    font-size: $small-font-size;
-}

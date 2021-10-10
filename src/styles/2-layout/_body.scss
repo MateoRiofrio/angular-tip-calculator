@@ -1,0 +1,15 @@
+body {
+    font-family: monospace;
+    font-size: $small-font-size;
+    background-color: $light-grayish-cyan;
+}
+
+.body-container {
+    @include curved-container($height: 30%, $width: 50%, $color: $white);
+    margin: auto;
+    margin-top: 10%;
+}
+
+.results-container {
+    @include curved-container($height: 400px, $width: 500px, $color: $very-dark-cyan)
+}
