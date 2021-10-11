@@ -1,0 +1,49 @@
+.input-fields-container {
+    @include small-cyan-label; 
+}
+
+.main-container {
+	@include curved-container(
+		$height: 15em,
+		$width: 50%,
+		$padding: 55px 55px,
+		$color: $white
+	);
+	margin: auto;
+	margin-top: 10%;
+}
+
+.results-container {
+	@include curved-container(
+		$height: 10em,
+		$width: 40%,
+		$padding: 50px 47px,
+		$color: $very-dark-cyan
+	);
+	p {
+		color: $white;
+	}
+	span {
+		color: $dark-grayish-cyan;
+	}
+
+    input[type='submit'] {
+        @include button(
+            $padding: 10px,
+            $background-color: $primary,
+            $border-radius: 5px
+        );
+        font-weight: $large-weight;
+        font-size: $small-font-size;
+        color: $very-dark-cyan;
+        width: 100%;
+        border: none;
+    }
+
+    .big-result-text {
+		color: $primary;
+		font-size: $large-font-size;
+		font-weight: $large-weight;
+		float: right;
+	}
+}

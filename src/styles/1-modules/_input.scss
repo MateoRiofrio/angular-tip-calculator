@@ -1,0 +1,11 @@
+.colored-borderless-text-input {
+	// color and border change for text fields
+	input[type='text'] {
+		background-color: $light-grayish-cyan-two;
+		border: none;
+		border-radius: 5px;
+		width: 80%;
+		min-height: 35px;
+	}
+    // input font-size, font-weight, etc
+}

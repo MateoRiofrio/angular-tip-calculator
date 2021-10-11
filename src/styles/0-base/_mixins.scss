@@ -8,8 +8,15 @@
 	border: $border;
 	background-color: $color;
 }
+
 @mixin button($padding: 5px 5px, $background-color, $border-radius: 0px) {
 	padding: $padding;
 	background-color: $background-color;
-    border-radius: $border-radius;
+	border-radius: $border-radius;
+}
+
+@mixin small-cyan-label {
+	font-size: $xsmall-font-size;
+	font-weight: $large-weight;
+	color: $dark-grayish-cyan;
 }
