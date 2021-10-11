@@ -1,36 +1,53 @@
-<div class="calculator-container">
+<div class="main-container">
 	<form>
-        <!-- Input column with bill amount, tip selection, and number of people -->
-		<div class="column">
+		<!-- Input column with bill amount, tip selection, and number of people -->
+		<div class="input-fields-container column">
 			<app-text-input-with-label-and-icon
+				class="colored-borderless-text-input"
 				name="bill-amount"
 				labelText="Bill"
 			></app-text-input-with-label-and-icon>
-			<div class="tip-selection">
-				<app-input-with-label
+			
+			<div class="tip-selector">
+				<p>Select Tip %</p>
+				<app-custom-input-with-label
 					*ngFor="let tipPercent of [5, 10, 15, 25, 50]"
 					type="radio"
 					labelText="{{ tipPercent + '%' }}"
 					name="tip-option"
-				></app-input-with-label>
-				<input class="custom-tip" type="text" placeholder="Custom" />
+				></app-custom-input-with-label>
+				<input
+					class="custom-tip"
+					type="text"
+					placeholder="Custom"
+				/><br />
 			</div>
+
 			<app-text-input-with-label-and-icon
+				class="colored-borderless-text-input"
 				name="number-of-people"
 				labelText="Number of People"
 			></app-text-input-with-label-and-icon>
 		</div>
-        <!-- Results column with tip amount, total amount, and sumbit/reset button -->
+
+		<!-- Results column with tip amount, total amount, and sumbit/reset button -->
 		<div class="results-container column">
-            <div class="row">
-                <p>Tip Amount <span class="big-result-text">$0.00</span><br><span>/ person</span></p>
-            </div>
-            <div class="row">
-                <p>Total <span class="big-result-text">$0.00</span><br><span>/ person</span></p>
-            </div>
-            <div class="row">
-                <input class="submit-button" type="submit" value="RESET">
-            </div>
-        </div>
+			<div class="row">
+				<p>
+					Tip Amount <span class="big-result-text">$0.00</span
+					><br /><span>/ person</span>
+				</p>
+			</div>
+			<div class="row">
+				<p>
+					Total <span class="big-result-text">$0.00</span><br /><span
+						>/ person</span
+					>
+				</p>
+			</div>
+			<div class="row">
+				<input type="submit" value="RESET" />
+			</div>
+		</div>
 	</form>
 </div>
