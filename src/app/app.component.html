@@ -5,18 +5,22 @@
 			<app-text-input-with-label-and-icon
 				class="colored-borderless-text-input"
 				name="bill-amount"
+				iconName="fa fa-dollar icon"
 				labelText="Bill"
 			></app-text-input-with-label-and-icon>
-			
+
 			<div class="tip-selector">
 				<p>Select Tip %</p>
-				<app-custom-input-with-label
-					*ngFor="let tipPercent of [5, 10, 15, 25, 50]"
-					type="radio"
-					labelText="{{ tipPercent + '%' }}"
-					name="tip-option"
-					
-				></app-custom-input-with-label>
+				<ng-container *ngFor="let tipPercent of [5, 10, 15, 25, 50]">
+					<input
+						type="radio"
+						name="tip-option"
+						id="tip-option-{{tipPercent}}"
+						ng-checked="tipPercent == 5"
+						value="{{tipPercent}}"
+					/>
+					<label for="tip-option-{{tipPercent}}">{{ tipPercent }}%</label>
+				</ng-container>
 				<input
 					class="custom-tip"
 					type="text"
@@ -27,6 +31,7 @@
 			<app-text-input-with-label-and-icon
 				class="colored-borderless-text-input"
 				name="number-of-people"
+				iconName="fa fa-user icon"
 				labelText="Number of People"
 			></app-text-input-with-label-and-icon>
 		</div>
@@ -35,15 +40,14 @@
 		<div class="results-container column">
 			<div class="row">
 				<p>
-					Tip Amount <span class="big-result-text">$0.00</span
-					><br /><span>/ person</span>
+					Tip Amount <span class="big-result-text">$0.00</span>
+					<br /><span>/ person</span>
 				</p>
 			</div>
 			<div class="row">
 				<p>
-					Total <span class="big-result-text">$0.00</span><br /><span
-						>/ person</span
-					>
+					Total <span class="big-result-text">$0.00</span>
+					<br /><span>/ person</span>
 				</p>
 			</div>
 			<div class="row">

@@ -1,20 +1,16 @@
 body {
 	font-family: 'Space Mono', monospace;
-	font-size: $small-font-size;
 	background-color: $light-grayish-cyan;
 }
-
 .column {
 	float: left;
 	width: 50%;
 }
-
 .row:after {
 	content: '';
 	display: table;
 	clear: both;
 }
-
 @media screen and (max-width: 1100px) {
 	.column {
 		width: 100%;

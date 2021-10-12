@@ -6,61 +6,70 @@ input {
 	input[type='text'] {
 		background-color: $light-grayish-cyan-two;
 		border: none;
-		border-radius: 5px;
+		border-radius: 0.5rem;
 		width: 80%;
-		min-height: 35px;
+		min-height: 3.5rem;
 		text-align: right;
-		font-size: $small-font-size;
+		font-size: $medium-font-size;
 		font-weight: $large-weight;
 		color: $very-dark-cyan;
 	}
+	i {
+		position: absolute;
+		color: $light-grayish-cyan;
+	}
+	.icon {
+		padding: 1rem;
+        min-width: 3rem;
+	}
 }
-
 .tip-selector {
-	margin-top: 40px;
-	margin-bottom: 40px;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
 	input[type='radio'] {
-		// remove radio button
-		opacity: 0;
 		position: fixed;
+		opacity: 0; // hide radio button
 		width: 0;
 		// change color based on selection
 		&:checked + label {
 			background-color: $primary;
 			color: $very-dark-cyan;
 		}
-		&:hover + label {
-			background-color: $primary;
-			color: $very-dark-cyan;
-		}
 	}
 	// make custom tip look like the a button
 	input[type='text'] {
-		background-color: $light-grayish-cyan-two;
-		padding: 15px 10px;
+		text-align: center;
 		border: none;
-		border-radius: 5px;
-		width: 20%;
+		background-color: $light-grayish-cyan-two;
+		border-radius: 0.5rem;
+		width: 11.5rem;
+		height: 4.5rem;
 		color: $very-dark-cyan;
 		font-weight: $large-weight;
 		font-size: $small-font-size;
 	}
 	label {
-		// make the label have a button-like surrounding
+		// make the label have a button-like look
+		width: 7rem;
+		height: 3rem;
+		font-size: $medium-font-size;
 		@include button(
-			$padding: 10px 25px,
+			$padding: 1rem 2.5rem,
 			$background-color: $very-dark-cyan,
-			$border-radius: 5px
+			$border-radius: 0.5rem
 		);
-		color: $white;
-		margin-right: 10px;
-		margin-bottom: 10px;
-		display: inline-block;
-		font-size: $small-font-size;
-		font-weight: $large-weight;
-		min-height: 20px;
-		min-width: 30px;
-	}
 
-	
+		// change font color and align, and spacing between the radio buttons
+		color: $white;
+		margin-right: 1rem;
+		margin-bottom: 1rem;
+		display: inline-block;
+		text-align: center;
+
+		// hovering over the label will change its color
+		&:hover {
+			background-color: $primary;
+			color: $very-dark-cyan;
+		}
+	}
 }

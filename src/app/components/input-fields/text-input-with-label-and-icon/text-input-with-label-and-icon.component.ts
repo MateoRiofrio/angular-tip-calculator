@@ -6,20 +6,14 @@ import { Attribute, Component, Input, OnInit } from '@angular/core';
     <label for={{name}}>{{
       labelText
     }}</label><br>
+    <i class={{iconName}}></i>
     <input type="text" value={{value}} name={{name}}>
   `
 })
+
 export class TextInputWithLabelAndIconComponent {
   @Input() labelText: string = "LabelText"; 
+  @Input() iconName: string = ""; 
   constructor(@Attribute('value') public value: string, @Attribute('name') public name: string) { 
-
   }
-  
-}
-
-function checkRadio(tipPercent: number) {
-    if (tipPercent == 5) {
-      return true;
-    }
-    return false;
 }

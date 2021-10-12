@@ -1,20 +1,18 @@
-@mixin curved-container($height, $width, $padding: 0 0, $border: 0, $color) {
+@mixin curved-container($height, $width, $padding: 0 0, $border: 0, $border-radius: 1.6rem, $color) {
 	height: $height;
 	width: $width;
-	min-height: 200px;
-	min-width: 200px;
+	// min-height: $min-height;
+	// min-width: $min-width;
 	padding: $padding;
-	border-radius: 16px;
+	border-radius: $border-radius;
 	border: $border;
 	background-color: $color;
 }
-
-@mixin button($padding: 5px 5px, $background-color, $border-radius: 0px) {
+@mixin button($padding: 0.5rem 0.5rem, $background-color, $border-radius: 0rem) {
 	padding: $padding;
 	background-color: $background-color;
 	border-radius: $border-radius;
 }
-
 @mixin small-cyan-label {
 	font-size: $xsmall-font-size;
 	font-weight: $large-weight;

@@ -3,3 +3,8 @@
 @import './1-modules/__module-dir';
 @import './2-layout/__layout-dir';
 @import url(https://fonts.google.com/specimen/Space+Mono);
+
+html {
+    // if font-size == 16px, then 1rem <=> 10px
+    font-size: 62.5%;
+}
