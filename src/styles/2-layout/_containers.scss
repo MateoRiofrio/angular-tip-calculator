@@ -1,7 +1,3 @@
-.input-fields-container {
-    @include small-cyan-label; 
-}
-
 .main-container {
 	@include curved-container(
 		$height: 15em,
@@ -9,13 +5,18 @@
 		$padding: 55px 55px,
 		$color: $white
 	);
+	// center main container
 	margin: auto;
 	margin-top: 10%;
 }
 
+.input-fields-container {
+    @include small-cyan-label; 
+}
+
 .results-container {
 	@include curved-container(
-		$height: 10em,
+		$height: 11em,
 		$width: 40%,
 		$padding: 50px 47px,
 		$color: $very-dark-cyan
@@ -25,6 +26,7 @@
 	}
 	span {
 		color: $dark-grayish-cyan;
+        font-size: $xsmall-font-size;
 	}
 
     input[type='submit'] {

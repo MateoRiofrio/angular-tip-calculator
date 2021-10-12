@@ -14,4 +14,12 @@ export class TextInputWithLabelAndIconComponent {
   constructor(@Attribute('value') public value: string, @Attribute('name') public name: string) { 
 
   }
+  
+}
+
+function checkRadio(tipPercent: number) {
+    if (tipPercent == 5) {
+      return true;
+    }
+    return false;
 }

@@ -1,3 +1,6 @@
+input {
+	font-family: 'Space Mono', monospace;
+}
 .colored-borderless-text-input {
 	// color and border change for text fields
 	input[type='text'] {
@@ -6,6 +9,58 @@
 		border-radius: 5px;
 		width: 80%;
 		min-height: 35px;
+		text-align: right;
+		font-size: $small-font-size;
+		font-weight: $large-weight;
+		color: $very-dark-cyan;
 	}
-    // input font-size, font-weight, etc
+}
+
+.tip-selector {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	input[type='radio'] {
+		// remove radio button
+		opacity: 0;
+		position: fixed;
+		width: 0;
+		// change color based on selection
+		&:checked + label {
+			background-color: $primary;
+			color: $very-dark-cyan;
+		}
+		&:hover + label {
+			background-color: $primary;
+			color: $very-dark-cyan;
+		}
+	}
+	// make custom tip look like the a button
+	input[type='text'] {
+		background-color: $light-grayish-cyan-two;
+		padding: 15px 10px;
+		border: none;
+		border-radius: 5px;
+		width: 20%;
+		color: $very-dark-cyan;
+		font-weight: $large-weight;
+		font-size: $small-font-size;
+	}
+	label {
+		// make the label have a button-like surrounding
+		@include button(
+			$padding: 10px 25px,
+			$background-color: $very-dark-cyan,
+			$border-radius: 5px
+		);
+		color: $white;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		display: inline-block;
+		font-size: $small-font-size;
+		font-weight: $large-weight;
+		min-height: 20px;
+		min-width: 30px;
+	}
+
+	
 }
