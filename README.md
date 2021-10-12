@@ -8,3 +8,5 @@ Since it is a simple application, I have hosted it on GitHub Pages [here](). You
 ### UI Design:
 ![UI design](/desktop-design-completed.jpg)
 
+### End Product: 
+![UI Design](./progress-pics/end-product.PNG)
